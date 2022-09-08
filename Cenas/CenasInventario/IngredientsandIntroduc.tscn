@@ -1,0 +1,50 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/Inventario/IngredientsandIntroduc.gd" type="Script" id=1]
+[ext_resource path="res://Images/Menu/QuitButton.png" type="Texture" id=2]
+[ext_resource path="res://Images/ProductModel/DefIngredandGamePlayers/0..PNG" type="Texture" id=3]
+[ext_resource path="res://Images/ProductModel/DefIngredandGamePlayers/2..PNG" type="Texture" id=4]
+[ext_resource path="res://Images/ProductModel/DefIngredandGamePlayers/3..PNG" type="Texture" id=5]
+[ext_resource path="res://Images/ProductModel/DefIngredandGamePlayers/1..PNG" type="Texture" id=6]
+[ext_resource path="res://Images/ProductModel/DefIngredandGamePlayers/4..PNG" type="Texture" id=7]
+[ext_resource path="res://Images/Menu/QuitButtonHover.png" type="Texture" id=8]
+[ext_resource path="res://Images/Menu/QuitButtonPressed1.png" type="Texture" id=9]
+
+[node name="IngredientsandIntroduc" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="pag1" type="Sprite" parent="."]
+position = Vector2( 502, 297 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 3 )
+
+[node name="pag2" type="Sprite" parent="."]
+position = Vector2( 506, 297 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 6 )
+
+[node name="pag3" type="Sprite" parent="."]
+position = Vector2( 506, 295 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 4 )
+
+[node name="pag4" type="Sprite" parent="."]
+position = Vector2( 502, 297 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 5 )
+
+[node name="pag5" type="Sprite" parent="."]
+position = Vector2( 506, 295 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 7 )
+
+[node name="QuitButton" type="TextureButton" parent="."]
+margin_left = 919.0
+margin_right = 1245.0
+margin_bottom = 170.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 8 )
+
+[connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]

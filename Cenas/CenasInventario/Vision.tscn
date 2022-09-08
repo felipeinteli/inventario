@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Images/Menu/QuitButton.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Inventario/Vision.gd" type="Script" id=2]
+[ext_resource path="res://Images/Inventario/PNGProductModel/2.Vision/1..PNG" type="Texture" id=3]
+[ext_resource path="res://Images/Inventario/PNGProductModel/2.Vision/2..PNG" type="Texture" id=4]
+[ext_resource path="res://Images/Menu/QuitButtonHover.png" type="Texture" id=5]
+[ext_resource path="res://Images/Menu/QuitButtonPressed1.png" type="Texture" id=6]
+
+[node name="Vision" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="pag1" type="Sprite" parent="."]
+position = Vector2( 511, 297 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 3 )
+
+[node name="pag2" type="Sprite" parent="."]
+position = Vector2( 513, 297 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 4 )
+
+[node name="QuitButton" type="TextureButton" parent="."]
+margin_left = 918.0
+margin_top = 1.0
+margin_right = 1244.0
+margin_bottom = 171.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 5 )
+
+[connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
